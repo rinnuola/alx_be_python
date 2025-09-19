@@ -27,6 +27,5 @@ else:
 # Print customized reminder
 print("\n" + reminder)
 
-# Closing message
-print("\nWell done on completing this project! Let the world hear about this milestone achieved.")
-print("🚀 Click here to tweet! 🚀")
+
+
