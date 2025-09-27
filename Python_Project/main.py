@@ -1,5 +1,5 @@
 # main.py
-import calculator
+import cal
 
 print("Addition:", calculator.add(5, 3))
 print("Subtraction:", calculator.subtract(5, 3))
