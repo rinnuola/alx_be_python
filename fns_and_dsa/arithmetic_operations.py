@@ -20,3 +20,8 @@ def perform_operation(num1: float, num2: float, operation: str):
         return num1 / num2
     else:
         return "Error: Invalid operation"
+
+if __name__ == "__main__":
+    # Example usage
+    result = perform_operation(10, 5, "add")
+    print(result)   # should print 15
