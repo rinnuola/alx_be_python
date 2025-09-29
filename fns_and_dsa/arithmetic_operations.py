@@ -21,7 +21,11 @@ def perform_operation(num1: float, num2: float, operation: str):
     else:
         return "Error: Invalid operation"
 
+
 if __name__ == "__main__":
-    # Example usage
-    result = perform_operation(10, 5, "add")
-    print(result)   # should print 15
+    print("Arithmetic Operations")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+    result = perform_operation(num1, num2, operation)
+    print(f"Result: {result}")
