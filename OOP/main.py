@@ -1,22 +1,23 @@
-# Provided for Testing: main.py
-# To test your Book class, use the following main.py script, which demonstrates creating a Book instance and utilizing the implemented magic methods
-# from book_class import Book
+# book_class.py
+# Objective: Demonstrate Python magic methods using a Book class
 
-from book_class import Book
+class Book:
+    # Constructor (__init__) initializes object attributes when a new instance is created
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
 
-def main():
-    # Creating an instance of Book
-    my_book = Book("1984", "George Orwell", 1949)
+    # Destructor (__del__) runs automatically when an object is deleted
+    # It can be used to clean up resources or display a message
+    def __del__(self):
+        print(f"Deleting {self.title}")
 
-    # Demonstrating the __str__ method
-    print(my_book)  # Expected: 1984 by George Orwell, published in 1949
+    # __str__ provides a readable (informal) string representation for end users
+    def __str__(self):
+        return f"{self.title} by {self.author}, published in {self.year}"
 
-    # Demonstrating the __repr__ method
-    print(repr(my_book))  # Expected: Book('1984', 'George Orwell', 1949)
-
-    # Deleting a book instance to trigger __del__
-    del my_book
-
-if __name__ == "__main__":
-    main()
-
+    # __repr__ provides an official string representation for developers
+    # It should return a string that could recreate the same object
+    def __repr__(self):
+        return f"Book('{self.title}', '{self.author}', {self.year})"
