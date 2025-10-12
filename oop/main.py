@@ -1,22 +1,17 @@
-# main.py
-# Provided for Testing: main.py
-# To test your Book class, use the following main.py script, which demonstrates creating a Book instance and utilizing the implemented magic methods.
-
-from book_class import Book
+from library_system import Book, EBook, PrintBook, Library
 
 def main():
-    # Creating an instance of Book
-    my_book = Book("1984", "George Orwell", 1949)
+    my_library = Library()
 
-    # Demonstrating the __str__ method
-    print(my_book)  # Expected: 1984 by George Orwell, published in 1949
+    classic_book = Book("Pride and Prejudice", "Jane Austen")
+    digital_novel = EBook("Snow Crash", "Neal Stephenson", 500)
+    paper_novel = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
 
-    # Demonstrating the __repr__ method
-    print(repr(my_book))  # Expected: Book('1984', 'George Orwell', 1949)
+    my_library.add_book(classic_book)
+    my_library.add_book(digital_novel)
+    my_library.add_book(paper_novel)
 
-    # Deleting a book instance to trigger __del__
-    del my_book
+    my_library.list_books()
 
-# This line ensures main() runs when you execute the script
 if __name__ == "__main__":
     main()
